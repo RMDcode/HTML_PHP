@@ -1,0 +1,23 @@
+<html>
+	<script>
+		function display()
+		{
+			var n = document.getElementById('n').value;
+			var x = new XMLHttpRequest();
+			x.open("GET","name.php?n="+n,true);
+			x.send();
+			x.onreadystatechange = function()
+			{
+				if(x.readyState==4 && x.status ==200)
+				{
+					document.getElementById("msg").innerHTML=x.responseText;
+				}
+			}
+		}
+	</script>
+	<body>
+		Search Box: <input type="text" name="n" id="n"><br><br>
+			    <input type="button" value="show" onclick="display()">
+			    <p id="msg">  </p>
+	</body>
+</html>

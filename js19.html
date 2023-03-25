@@ -1,0 +1,33 @@
+<!-- One way to stop form submission is to return false from your javascript function. -->
+<html>
+	<script>
+	function validate()
+	{
+			var name= document.getElementById("n").value;
+			var mob= document.getElementById("m").value;
+
+			if(name.length==0 || age.length==0 || mob.length==0 )
+			{
+				alert("All fields are compulsory !!");
+				return false;
+			}
+			else
+				return true;
+
+			
+	}
+
+
+	</script>
+	<body>
+	<pre>
+			<form method="POST" action="Student.php" onsubmit="return validate()">
+			Name : <input type="text" name="n" id="n">  <br>
+			Mobile : <input type="text" name="m" id="m"> <br>
+
+			<input type="submit" value="OK">
+
+			</form>
+	</pre>
+	</body>
+</html>

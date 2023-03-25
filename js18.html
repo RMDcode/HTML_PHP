@@ -1,0 +1,42 @@
+<!-- Write a program to a search the book name according to the character typed and display same list using an array. -->
+<html>
+	<script type="text/javascript">
+		
+		function display()
+		{
+			var bname=["c","c++","php","java","python"];
+			var i,x,temp;
+
+			var bn= document.getElementById("bn").value;
+			if(bn.length==0)
+			{
+				alert("Please enter some input !!!");
+				return;
+			}
+			
+			x="List of people : <br> ";
+
+			for(i=0;i<5;i++)
+			{
+				temp=bname[i].substring(0,bn.length);
+
+				if(temp==bn)
+					x=x+bname[i]+"<br>";
+
+			}
+			document.getElementById("msg").innerHTML=x;
+			
+		}
+
+
+
+	</script>
+	<body>
+			<input type="text" id="bn">
+			<input type="button" value="Search" onclick="display()">
+			<H1 id="msg">  </h1>
+	</body>
+
+
+
+</html>

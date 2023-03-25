@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<script type="Text/Javascript">
+
+		var winob;
+		
+		function myopen()
+		{
+			winob=window.open("","myWindow","width=200,height=100");
+			winob.document.write("<p>Hello Rohit</p>");
+		}
+
+		function mymove()
+		{
+			winob.moveTo(500, 200);
+			winob.focus();
+			document.write("Letter has been moved!<br>");
+		}
+		
+		function myresize()
+		{
+			winob.resizeTO(300,300);
+			winob.focus();
+			document.write("Letter resize hasm been done<br>");
+		}
+		
+		function myclose()
+		{
+			winob.close();
+		}
+	</script>
+<body>
+
+	<H1>Open "myWindow" and move the new window to the top left corner of the screen:</H1>
+
+	<button onclick="myopen()">Open</button><br>
+	<button onclick="mymove()">Move</button><br>
+	<button onclick="myresize()">Resize</button><br>
+	<button onclick="myclose()">close</button>
+</body>
+
+</html>
+

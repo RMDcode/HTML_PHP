@@ -1,0 +1,27 @@
+<!-- Write a java script to accept a sentence from user and convert it to an array of words. Also display array elements ?  -->
+
+<html>
+	<script type="text/javascript">
+			function display()
+			{
+				var s= document.getElementById("s").value;
+				var arr= s.split(" ");
+				var msg=" ";
+				var i;
+				for(i=0 ; i<arr.length ; i++)
+				{
+					msg = msg + arr[i] + "<br>";
+				}
+				document.getElementById("msg").innerHTML=msg;
+
+			}
+	</script>
+	<body>
+		Enter Sentence :<input type="text" name="s" id="s"> <br>
+		<input type="button" value="ok" onclick="display()">
+		<p id="msg"> </p>
+	</body>
+
+
+
+</html>

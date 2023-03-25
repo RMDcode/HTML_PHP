@@ -1,0 +1,26 @@
+<html><!-- Write a javascript which display greeting based on time when user clicks button  -->
+	<script type="text/javascript">
+		function myfun()
+		{
+			var d=new Date();
+			var hr=d.getHours();
+
+			if(hr<=12)
+				document.write("Good morning<br>");
+			
+		else	if(hr<=18)
+				document.write("Good Evening<br>");
+		
+		else 	
+				document.write("Good Night<br>");
+
+		}
+
+
+	</script>
+
+	<body>
+			<input type="button" value="ok" onclick="myfun()">
+
+	</body>
+</html>

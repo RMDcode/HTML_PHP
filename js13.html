@@ -1,0 +1,55 @@
+<!-- Design HTML form, accept student name, age & mobile no. from user. Using javascript validate for following.
+	a)student name should not be empty.
+	b)student age must be between 1 to 20.  -->
+<html>
+	
+	<script type="text/javascript">
+		function validate()
+		{	
+			var name= document.getElementById("n").value;
+			var age= document.getElementById("a").value;
+			var mob= document.getElementById("mb").value;
+
+			if( name.length == 0 || age.length == 0 || mob.length == 0 )
+			{
+				alert("All fields are compulsory!!");
+				return false;
+			}
+
+			var t= parseInt(age);
+			if(isNaN(t))
+			{
+				alert("Age must be a number !!!");
+				return false;
+			}
+			else
+			{
+				if(age >= 1 && age <=30)
+				{
+					alert("All values are valid !!!");
+					return true;
+				}
+				else
+				{	
+					alert("Age must be between 1 & 100 !!!");
+					return false;
+				}
+			}
+			
+
+		}
+
+	</script>
+	<body>
+		<form onsubmit="return validate()">
+		
+		Name:<input type="text" name="n" id="n"> <br>
+		Age:<input type="text" name="a" id="a"> <br>
+		Mobile:<input type="text" name="mb" id="mb"> <br>
+
+		<input type="submit" value="Ok">
+
+		</form>
+	</body>
+
+</html>

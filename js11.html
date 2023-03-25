@@ -1,0 +1,27 @@
+<!-- Prompt Box  -->
+
+<html>
+	<script type="text/javascript">
+		
+		function display()
+		{	
+			var x= prompt("Enter OTP:");
+
+			if(x==null)
+
+				document.getElementById("msg").innerHTML="No Input";
+			else
+				document.getElementById("msg").innerHTML=x;
+		}
+
+
+
+	</script>
+	<body>
+		<H1 id="msg">India</H1>
+		<input type="button" value="Score" onclick="display()">
+	</body>
+
+
+
+</html>

@@ -1,0 +1,33 @@
+<!--Confirm Box -->
+
+<html>
+	<script type="text/javascript">
+		
+		function display()
+			{
+				var x;
+				var r=confirm("Please confirm amount, Do you want to process???");
+
+
+				if(r==true)
+					x="You Pressed Ok !!!";
+
+				else
+					x="You Pressed Cancel!!!";
+
+				document.getElementById("msg").innerHTML=x;
+			
+			
+			}
+	
+	</script>
+	<body>
+			<H1 id="msg"> </H1>
+
+			<input type="button" value="ok" onclick="display()">
+		
+	</body>
+
+
+
+</html>

@@ -1,0 +1,31 @@
+<!-- Write a javascript that accept a string from user. pass this strings as parameter to a function check_vowel() on button click event & return the count
+of the number of vowel within the strings.-->
+<html>
+	<script type="text/javascript">
+
+		function check_vowel()
+		{
+			var name= document.getElementById("strname").value;
+			var cnt=0,i;
+
+			for(i=0;i<name.length;i++)
+			{
+				if( name[i]=='a'|| name[i]=='e' || name[i]=='i' || name[i]=='o' || name[i]=='u' ||
+					name[i]=='A' || name[i]=='E' || name[i]=='I' || name[i]=='O' || name[i]=='U')
+				{
+					cnt++;
+
+				}
+			}
+			document.getElementById("msg").innerHTML="Number of vowels in"+name+"is"+cnt;
+
+		}
+
+	</script>
+	<body>
+			Enter the String:<input type="text" name="sname" id="strname"> <br>
+			<input type="button" value="Check" onclick="check_vowel()">
+			<h1 id="msg">  </h1>
+	</body>
+
+</html>
